@@ -15,5 +15,5 @@ MonoBehaviour:
   _name: Fire Balls
   _description: Harness the power of the sun
   _sprite: {fileID: 21300000, guid: 737ac697b3bac64469e8be88d9011c72, type: 3}
-  _object: {fileID: 0}
-  _duration: 0
+  _object: {fileID: 7802042456751046628, guid: 17aa0328f3b581048907bfaf362de7e9, type: 3}
+  _duration: 5
