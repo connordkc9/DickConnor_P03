@@ -10,11 +10,11 @@ public class PowerupController : MonoBehaviour
     private Powerup _selected;
     private GameObject _activePowerup;
 
-    private string _name;
-    private string _description;
-    private Sprite _sprite;
-    private GameObject _object;
-    private float _duration;
+    public string _name;
+    public string _description;
+    public Sprite _sprite;
+    public GameObject _object;
+    public float _duration;
     private float _timeLeft;
     
     [SerializeField] private TextMeshProUGUI _UIName;
@@ -25,8 +25,8 @@ public class PowerupController : MonoBehaviour
 
     private void Update()
     {
-        #region Testing Hotkeys
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        #region Testing Hotkeys (Uncomment for Debugging)
+        /*if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             _selected = _powerups[0];
             _name = _selected._name;
@@ -73,7 +73,7 @@ public class PowerupController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             _UIPanel.SetActive(false);
-        }
+        }*/
         #endregion
 
         //Decrease Timer. If 0, Deactivate.
@@ -88,7 +88,7 @@ public class PowerupController : MonoBehaviour
         }
     }
 
-    void ActivatePowerup()
+    public void ActivatePowerup()
     {
         DeactivatePowerup();
         UIUpdate();
