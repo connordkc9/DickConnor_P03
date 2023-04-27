@@ -433,6 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 276810543}
   - component: {fileID: 276810542}
+  - component: {fileID: 276810544}
   m_Layer: 0
   m_Name: Item Box
   m_TagString: Untagged
@@ -471,6 +472,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276810544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276810541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6913ce0ac613745a50efd503989c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 1456303395}
+  _powerups:
+  - {fileID: 11400000, guid: 6031174f8862d8c4abed283cc9bde551, type: 2}
+  - {fileID: 11400000, guid: c05fb6012faae624fb86116dbdf3d401, type: 2}
+  - {fileID: 11400000, guid: dccc6604ddba1c74b935b6dc5087f113, type: 2}
+  - {fileID: 11400000, guid: 0212d9a8c76d1074e92bb04735545cfc, type: 2}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
