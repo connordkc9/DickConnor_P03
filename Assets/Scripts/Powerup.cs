@@ -11,4 +11,6 @@ public class Powerup : ScriptableObject
     public Sprite _sprite;
 
     public GameObject _object;
+
+    public float _duration;
 }
