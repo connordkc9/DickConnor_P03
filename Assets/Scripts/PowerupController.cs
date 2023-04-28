@@ -9,6 +9,7 @@ public class PowerupController : MonoBehaviour
     public Powerup[] _powerups;
     private Powerup _selected;
     private GameObject _activePowerup;
+    private bool _active = false;
 
     public string _name;
     public string _description;
@@ -90,14 +91,19 @@ public class PowerupController : MonoBehaviour
 
     public void ActivatePowerup()
     {
-        DeactivatePowerup();
-        UIUpdate();
-        _activePowerup = Instantiate(_object);
+        if (_active != true)
+        {
+            DeactivatePowerup();
+            UIUpdate();
+            _activePowerup = Instantiate(_object);
+            _active = true;
+        }
     }
     
     void DeactivatePowerup()
     {
         _UIPanel.SetActive(false);
+        _active = false;
         Destroy(_activePowerup);
     }
 
