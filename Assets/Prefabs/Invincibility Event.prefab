@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6649918374516544403}
   m_Layer: 0
-  m_Name: DummyEvent (2)
+  m_Name: Invincibility Event
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
