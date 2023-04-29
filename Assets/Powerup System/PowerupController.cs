@@ -10,12 +10,13 @@ public class PowerupController : MonoBehaviour
     private Powerup _selected;
     private GameObject _activePowerup;
     private bool _active = false;
+    public bool _canOverwrite = false;
 
-    public string _name;
-    public string _description;
-    public Sprite _sprite;
-    public GameObject _object;
-    public float _duration;
+    [HideInInspector] public string _name;
+    [HideInInspector] public string _description;
+    [HideInInspector] public Sprite _sprite;
+    [HideInInspector] public GameObject _object;
+    [HideInInspector] public float _duration;
     private float _timeLeft;
     
     [SerializeField] private TextMeshProUGUI _UIName;
@@ -91,12 +92,21 @@ public class PowerupController : MonoBehaviour
 
     public void ActivatePowerup()
     {
-        if (_active != true)
+        if (_canOverwrite == true)
         {
             DeactivatePowerup();
             UIUpdate();
             _activePowerup = Instantiate(_object);
             _active = true;
+        } else
+        {
+            if (_active == false)
+            {
+                DeactivatePowerup();
+                UIUpdate();
+                _activePowerup = Instantiate(_object);
+                _active = true;
+            }
         }
     }
     

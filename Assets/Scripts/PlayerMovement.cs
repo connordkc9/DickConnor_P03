@@ -5,8 +5,17 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] CharacterController _controller;
+    public Material[] _materials;
+    [SerializeField] Renderer _renderer;
     
-    [SerializeField] float _moveSpeed = 10f;
+    public float _moveSpeed = 10f;
+
+    private void Start()
+    {
+        
+        _renderer.enabled = true;
+        _renderer.sharedMaterial = _materials[0];
+    }
 
     private void Update()
     {
@@ -20,4 +29,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void Speedup(float amount)
+    {
+        Debug.Log("Speeding Up!");
+        _moveSpeed += amount;
+    }
+
+    public void Invincibility(int index)
+    {
+        _renderer.sharedMaterial = _materials[index];
+    }
 }
